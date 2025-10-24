@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+<meta author="Matieț Denis | FE WildBreak SRL">
+<title>WildBreak — Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="img/logo_icon.PNG" rel="Website Icon" type="png">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <a href="index.html" id="to_main_logo"><img id="logo_img" src="img/logo_icon.PNG" title="WildBreak" alt="WildBreak"></a>
+
+    <h1 id="company_name">FE "WildBreak" SRL</h1>
+
+    <div class="header-actions" alt="WildBreak">
+      <button id="themeToggleBtn" class="theme-toggle-btn" title="Change theme" aria-label="Сменить тему" alt="WildBreak">🌙</button>
+      <a class="open_menu_button" id="menuBtn" aria-label="Открыть меню">
+        <span class="burger" alt="WildBreak">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+    </div>
+  <nav id="mainNav" alt="WildBreak">
+    <ul>
+      <li class="mobile-theme-li"><button class="mobile-theme-toggle" data-theme-toggle>🌙 Change theme</button></li>
+      <li><a href="index.html">Acasa</a></li>
+      <li><a href="contacts.html">Contacte</a></li>
+      <li><a href=""></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main alt="WildBreak">
+  <section class="info-blocks" alt="WildBreak">
+    <div class="info-card" alt="WildBreak - ATV">
+      <img src="img/ATV.jpg" alt="WildBreak" class="info-card-img">
+      <div class="info-card-content">
+        <h3>TUR ATV | Oferta specială!</h3>
+        <p>Descoperă senzația adevărată de libertate!
+            Fie că ești pasionat de adrenalină sau doar vrei să evadezi 
+            din rutină, un tur cu ATV-ul îți garantează experiențe de neuitat.</p>
+      </div>
+      <a href="atv.html" class="info-card-btn">Află mai mult</a>
+    </div>
+    <div class="info-card" alt="WildBreak - Parapanta">
+      <img src="img/parapanta.jpg" alt="WildBreak" class="info-card-img">
+      <div class="info-card-content">
+        <h3>Parapantă – Zboară deasupra lumii</h3>
+        <p>Lasă pământul în urmă și privește lumea dintr-o altă perspectivă.
+            Zborul cu parapanta îți oferă libertate, 
+            liniște și emoție în același timp.</p>
+      </div>
+      <a href="parapanta.html" class="info-card-btn" alt="WildBreak">Află mai mult</a>
+    </div>
+    <div class="info-card" alt="WildBreak - Tiroliana">
+      <img src="img/tiroliana.jpg" alt="WildBreak" class="info-card-img">
+      <div class="info-card-content">
+        <h3>Tiroliană – Zboară peste aventură</h3>
+        <p>Înfruntă-ți fricile și lasă-te purtat de aer.
+            Tiroliana este pentru cei care iubesc 
+            libertatea și curajul, oferind senzația unică a zborului.</p>
+      </div>
+      <a href="tiroliana.html" class="info-card-btn" alt="WildBreak">Află mai mult</a>
+    </div>
+    <div class="info-card" alt="WildBreak - Tir cu armă">
+      <img src="img/tir.jpg" alt="WildBreak" class="info-card-img">
+      <div class="info-card-content">
+        <h3>Tir cu armă – Precizie, concentrare, adrenalină</h3>
+        <p>Descoperă plăcerea competiției și 
+          eliberează stresul într-un mod sigur și controlat.
+          Perfecționează-ți ținta sub îndrumarea instructorilor profesioniști.</p>
+      </div>
+      <a href="tir.html" class="info-card-btn" alt="WildBreak">Află mai mult</a>
+    </div>
+    <div class="info-card" alt="WildBreak">
+      <img src="img/jet.jpg" alt="WildBreak - Jet-Ski" class="info-card-img">
+      <div class="info-card-content">
+        <h3>Jet-Ski – Viteză, valuri și soare</h3>
+        <p>Libertatea se simte cel mai bine pe apă.
+            Accelerează, simte stropii de valuri și 
+            bucură-te de puterea Jet-Ski-ului sub tine.</p>
+      </div>
+      <a href="jet_ski.html" class="info-card-btn" alt="WildBreak">Află mai mult</a>
+    </div>
+    <div class="info-card" alt="WildBreak - Glamping & Drumeții">
+      <img src="img/camping.jpg" alt="WildBreak" class="info-card-img">
+      <div class="info-card-content">
+        <h3>Glamping & Drumeții – Aventura în natură</h3>
+        <p>Redescoperă frumusețea naturii și liniștea departe de oraș.
+            Drumețiile și glampingul oferă relaxare, experiențe 
+            autentice și momente de conexiune cu natura.</p>
+      </div>
+      <a href="glamping.html" class="info-card-btn" alt="WildBreak">Află mai mult</a>
+    </div>
+
+  </section>
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script>
+  $(function() {
+    $('#menuBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#mainNav').toggleClass('open');
+    });
+
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#mainNav, #menuBtn').length) {
+        $('#mainNav').removeClass('open');
+      }
+    });
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <span class="footer-license">© 2025 <a href="https://github.com/matyden/TrainingCompany-WildBreak/blob/main/LICENSE" target="_blank">github.com/matyden/TrainingCompany-WildBreak</a>. Toate drepturile rezervate.</span>
+  </div>
+</footer>
+</body>
+
+</html>

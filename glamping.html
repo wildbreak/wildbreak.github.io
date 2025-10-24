@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+<meta author="Matieț Denis | FE WildBreak SRL">
+<title>WildBreak — Glamping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="img/logo_icon.PNG" rel="Website Icon" type="png">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <a href="index.html" id="to_main_logo"><img id="logo_img" src="img/logo_icon.PNG" title="WildBreak" alt="WildBreak"></a>
+
+    <h1 id="service">Glamping & Drumeții</h1>
+
+    <div class="header-actions" alt="WildBreak">
+      <button id="themeToggleBtn" class="theme-toggle-btn" title="Сменить тему" aria-label="Сменить тему" alt="WildBreak">🌙</button>
+      <a class="open_menu_button" id="menuBtn" aria-label="Открыть меню">
+        <span class="burger" alt="WildBreak">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+    </div>
+  <nav id="mainNav" alt="WildBreak">
+    <ul>
+      <li class="mobile-theme-li"><button class="mobile-theme-toggle" data-theme-toggle>🌙 Сменить тему</button></li>
+      <li><a href="index.html">Acasa</a></li>
+      <li><a href="#">ATV</a></li>
+      <li><a href="parapanta.html">Paraplanta</a></li>
+      <li><a href="#">ZIP-line</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main alt="WildBreak">
+  <section class="info-blocks" alt="WildBreak">
+    <div class="service-block">
+      <div class="service-gallery" data-gallery>
+        <img src="img/camping.jpg" alt="Glamping 1" class="gallery-main" data-index="0">
+        <div class="gallery-thumbs">
+          <button class="thumb" data-index="0"><img src="img/camping.jpg" alt="thumb"></button>
+          <button class="thumb" data-index="1"><img src="img/camping2.jpg" alt="thumb"></button>
+          <button class="thumb" data-index="2"><img src="img/camping3.jpg" alt="thumb"></button>
+        </div>
+      </div>
+      <div class="service-desc">
+        <h3>Glamping & Drumeții</h3>
+        <p>Experiențe în natură cu cazare confortabilă. Potrivit pentru cupluri sau grupuri. Editați textul și imaginile după preferințe.</p>
+      </div>
+    </div>
+    <!-- Price table for Glamping & Drumeții -->
+    <div class="price-table-wrapper" aria-label="Glamping Price List">
+      <h2 class="price-table-title">Glamping & Drumeții - Lista de prețuri</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th scope="col">Serviciu</th>
+            <th scope="col">Detalii (incl.)</th>
+            <th scope="col">Preț</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drumeție de zi prin pădure</td>
+            <td>2-6 pers — 12 ore (ghid, rucsac echipament, hrană, hartă, îmbrăcăminte specială)</td>
+            <td>1800 - 4200 lei</td>
+          </tr>
+          <tr>
+            <td>Drumeție completă</td>
+            <td>2-6 pers — 24 ore (ghid, hartă, rucsac echipament complet, cort, 3 mese, gustare, activități)</td>
+            <td>2800 - 6800 lei</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="price-table-note">*Prețuri estimate, în funcție de mărimea grupului și echipament. Contactați pentru ofertă personalizată.</p>
+    </div>
+    <!-- Копируйте и редактируйте блок .info-card для новых карточек -->
+  </section>
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+  $(function() {
+    $('#menuBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#mainNav').toggleClass('open');
+    });
+
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#mainNav, #menuBtn').length) {
+        $('#mainNav').removeClass('open');
+      }
+    });
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <span class="footer-license">© 2025 <a href="https://github.com/matyden/TrainingCompany-WildBreak/blob/main/LICENSE" target="_blank">github.com/matyden/TrainingCompany-WildBreak</a>. Toate drepturile rezervate.</span>
+  </div>
+</footer>
+</body>
+
+</html>

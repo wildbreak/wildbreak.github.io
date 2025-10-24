@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+<meta author="Matieț Denis | FE WildBreak SRL">
+<title>WildBreak — Tir cu armă</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="img/logo_icon.PNG" rel="Website Icon" type="png">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <a href="index.html" id="to_main_logo"><img id="logo_img" src="img/logo_icon.PNG" title="WildBreak" alt="WildBreak"></a>
+
+    <h1 id="service">Tir cu armă</h1>
+
+    <div class="header-actions" alt="WildBreak">
+      <button id="themeToggleBtn" class="theme-toggle-btn" title="Сменить тему" aria-label="Сменить тему" alt="WildBreak">🌙</button>
+      <a class="open_menu_button" id="menuBtn" aria-label="Открыть меню">
+        <span class="burger" alt="WildBreak">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+    </div>
+  <nav id="mainNav" alt="WildBreak">
+    <ul>
+      <li class="mobile-theme-li"><button class="mobile-theme-toggle" data-theme-toggle>🌙 Сменить тему</button></li>
+      <li><a href="index.html">Acasa</a></li>
+      <li><a href="#">ATV</a></li>
+      <li><a href="parapanta.html">Paraplanta</a></li>
+      <li><a href="#">ZIP-line</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main alt="WildBreak">
+  <section class="info-blocks" alt="WildBreak">
+    <div class="service-block">
+      <div class="service-gallery" data-gallery>
+        <img src="img/tir.jpg" alt="Tir 1" class="gallery-main" data-index="0">
+        <div class="gallery-thumbs">
+          <button class="thumb" data-index="0"><img src="img/tir.jpg" alt="thumb"></button>
+          <button class="thumb" data-index="1"><img src="img/tir2.jpg" alt="thumb"></button>
+        </div>
+      </div>
+      <div class="service-desc">
+        <h3>Tir cu armă</h3>
+        <p>Antrenament de tir sub supraveghere. Instructori calificați și echipament de protecție incluse.</p>
+      </div>
+    </div>
+    <!-- Price table for Tir cu armă -->
+    <div class="price-table-wrapper" aria-label="Tir Price List">
+      <h2 class="price-table-title">Tir cu armă - Lista de prețuri</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th scope="col">Serviciu</th>
+            <th scope="col">Detalii (incl.)</th>
+            <th scope="col">Preț</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sesiune de tir</td>
+            <td>1 oră — instructor + armă + țintă + cartușe</td>
+            <td>600 lei</td>
+          </tr>
+          <tr>
+            <td>Pachet de învățare</td>
+            <td>1 oră — 50 cartușe + instructor</td>
+            <td>550 lei</td>
+          </tr>
+          <tr>
+            <td>Love session (2 pers)</td>
+            <td>1 oră — instructor + armă + țintă + 60 cartușe</td>
+            <td>700 lei</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="price-table-note">*Prețuri pe sesiune. Echipament și instrucțiuni incluse acolo unde este specificat.</p>
+    </div>
+    <!-- Копируйте и редактируйте блок .info-card для новых карточек -->
+  </section>
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+  $(function() {
+    $('#menuBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#mainNav').toggleClass('open');
+    });
+
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#mainNav, #menuBtn').length) {
+        $('#mainNav').removeClass('open');
+      }
+    });
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <span class="footer-license">© 2025 <a href="https://github.com/matyden/TrainingCompany-WildBreak/blob/main/LICENSE" target="_blank">github.com/matyden/TrainingCompany-WildBreak</a>. Toate drepturile rezervate.</span>
+  </div>
+</footer>
+</body>
+
+</html>
